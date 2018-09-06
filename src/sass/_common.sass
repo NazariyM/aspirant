@@ -1,0 +1,126 @@
+body
+   min-width: 320px
+   -webkit-font-smoothing: antialiased
+   -moz-osx-font-smoothing: grayscale
+   +f('gp400', 18, 28)
+   color: $color1
+   &.is-locked
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      height: 0
+      overflow: hidden
+
+.container
+   max-width: 1170px
+   margin: 0 auto
+   padding: 0 15px
+   
+.row
+   display: flex
+   flex-wrap: wrap
+   margin: 0 -15px
+
+.main
+   overflow: hidden
+
+.section-title
+   $parent: &
+   position: relative
+   padding-bottom: 10px
+   &_left
+      text-align: left
+   &_center
+      text-align: center
+      &::after
+         margin-left: -25px
+   &::after
+      position: absolute
+      bottom: 0
+      width: 50px
+      height: 2px
+      background-color: $color5
+      content: ''
+      
+   &__label
+      margin-bottom: 5px
+      +f('gp700', 12, 12)
+      letter-spacing: 2.4px
+      color: $color3
+      text-transform: uppercase
+   &__text
+      +f('ex700', 34, 44)
+      color: $color4
+
+.btn
+   display: inline-block
+   padding: 12px 44px 10px
+   outline: 0
+   border-radius: 20px
+   transition: .3s ease-in-out
+   +f('gp400', 14)
+   line-height: 1.2
+   &__icon
+      &-circle
+         position: absolute
+         top: 50%
+         right: 20px
+         display: flex
+         justify-content: center
+         align-items: center
+         width: 22px
+         height: 22px
+         margin-top: -11px
+         background-color: rgba($white, .3)
+         border-radius: 50%
+   &_type-1
+      box-shadow: 0 15px 40px rgba(18, 3, 58, 0.15)
+      border: 1px solid #ffffff
+   &_type-2
+      background: transparent
+   &_type-3
+   &_type-4
+      position: relative
+      padding: 16px 55px 15px 40px
+      box-shadow: 0 15px 40px rgba(18, 3, 58, 0.15), 0 0 20px rgba(104, 193, 221, 0.2)
+      border-radius: 25px
+      background-color: $color5
+      +f('gp700', 16)
+      svg
+         width: 8px
+         height: 8px
+         fill: $white
+
+.circled-list
+   li
+      &::before
+         display: inline-block
+         vertical-align: middle
+         background-color: currentColor
+         width: 6px
+         height: 6px
+         margin-right: 5px
+         border-radius: 50%
+         content: ''
+         
+p
+   a
+      color: $color5
+      border-bottom: 1px solid rgba($color5, .6)
+      transition: .3s ease-in-out
+      &:hover
+         border-bottom-color: transparent
+strong
+   +f('gp700')
+
+.box-block
+   box-shadow: 0 15px 40px rgba(18, 3, 58, 0.15)
+   border-radius: 4px
+   background-color: #fff
+   font-size: 16px
+   line-height: 24px
+   transition: .3s ease-in-out
+   cursor: default
+   &:hover
+      transform: translateY(-10px)

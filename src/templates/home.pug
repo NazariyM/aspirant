@@ -1,0 +1,215 @@
+extends layouts/_layout
+
+block variables
+	-title = 'Главная'
+
+block content
+
+	//begin main
+	main.main
+
+		//begin screen
+		+b.SECTION.screen
+			+e.container.container
+				+e.triangle.triangle
+				+e.inner
+					+e.titles-wrap
+						+e.H2.title Shl
+						+e.H4.sub-title test
+					+e.descr
+						+e.P.descr-text Проходим SHL и другие тесты при устройстве на работу Online на
+							+e.SPAN.descr-text-mark._color-1 русском
+							= ' '
+							| и
+							+e.SPAN.descr-text-mark._color-2 английском
+							= ' '
+							| языке без предоплаты
+
+						+e.A.descr-btn.btn._type-4(href='#!') Как сдать тест?
+							.btn__icon-circle
+								+i('triangle-play')
+		//end screen
+
+		//begin about
+		+b.SECTION.about
+			+e.container.container
+				+e.text
+					+sectTitle('о нас', 'Кто поможет Вам пройти SHL тесты без предоплаты?', '_left about__title')
+
+					+e.descr
+						p Мы — друзья-аспиранты без пяти минут кандидаты наук.
+						p Обучаемся в аспирантуре и прекрасно разбираемся в любых научных дисциплинах. У нас технический склад ума и высокий IQ.
+						p Мы cможем сдать за Вас SHL, Talent Q, Map TQ и любые другие тесты! При этом, оплата тестов осуществляется в течение недели после сдачи!
+				+e.img(style='background-image: url(img/bg/about_bg.png)')
+		//end about
+
+		//begin services
+		+b.SECTION.services
+			+e.container.container
+				+sectTitle('услуги и Цены', 'Виды и стоимость прохождения SHL тестов', '_center services__title')
+
+				+e.row.row
+					-
+						servList = [{
+						icon: 'numbers',
+						title: 'Числовые',
+						price: '2 000'
+						}, {
+						icon: 'faces',
+						title: 'Личностный опросник',
+						price: '2 500'
+						}, {
+						icon: 'speech-bubbles',
+						title: 'Вербальные',
+						price: '2000'
+						}, {
+						icon: 'team-viewer',
+						title: 'Сдача через TeamViewer',
+						price: '2000'
+						}, {
+						icon: 'video-camera',
+						title: 'Видеозапись сдачи теста',
+						price: '500'
+						}, {
+						icon: 'discount',
+						title: 'Cкидка',
+						titleLabel: '20%',
+						list: ['При оплате вперёд', 'Обращение с другом']
+						}]
+
+					mixin servItem(item)
+						+e.item.box-block
+							+e.item-corner._top
+							+e.item-corner._bot
+							+e.item-inner
+								+e.item-icon-wrap
+									+e.item-icon(class=`icon-${item.icon}`)
+								+e.item-text
+									+e.H3.item-title= item.title
+									if item.titleLabel
+										span= item.titleLabel
+									if item.price
+										+e.H5.item-price
+											span= item.price
+											= ' '
+											| руб.
+									if item.list
+										+e.UL.item-list.circled-list
+											each text in item.list
+												li= text
+					each item in servList
+						+servItem(item)
+		//end services
+
+		//begin how-to
+		+b.SECTION.how-to
+			+e.container.container
+				+sectTitle('как мы работаем', 'Пройти SHL тесты очень просто', '_center how-to__title')
+				+e.row.row
+					+e.item.box-block
+						+e.item-icon-wrap._color-1
+							+e.item-icon.icon-send
+						+e.P.item-text Вы высылаете нам ссылку на тестирование
+					+e.item.box-block
+						+e.item-icon-wrap._color-2
+							+e.item-icon.icon-test
+						+e.P.item-text Мы проходим тестирование по ссылке
+					+e.item.box-block
+						+e.item-icon-wrap._color-3
+							+e.item-icon.icon-handshake
+						+e.P.item-text Узнаете результаты у работодателя. Вы сдали!
+					+e.item.box-block
+						+e.item-icon-wrap._color-1
+							+e.item-icon.icon-credit-card
+						+e.P.item-text Узнаете результаты у работодателя. Вы сдали!
+		//end how-to
+
+		//begin train
+		+b.SECTION.train
+			+e.container.container
+				+e.img(style='background-image: url(img/bg/train_bg.png)')
+				+e.text
+					+sectTitle('обучение', 'Не можешь — научим, не хочешь — заставим!', '_left train__title')
+					+e.text-inner
+						+e.P Теперь сдать SHL-тесты сможет даже Ваш дедуля. Стоимость обучения:
+						+e.UL.text-list.circled-list
+							li Академический час (45 минут) —
+								span 800 руб.
+							li Астрономический час (60 минут) —
+								span 1000 руб.
+						p Занятия проходят по
+							span Skype
+
+					+btn('b', 'Оставить заявку', '_type-3 train__text-btn')
+		//end train
+
+		//begin pass
+		+b.SECTION.pass
+			+e.container.container
+				+sectTitle('Как сдать SHL тест?', 'Пройти тесты SHL по доступной цене без предоплаты не сложно', '_left pass__title')
+				+e.text
+					p SHL тесты представляют собой особый вид аттестации, которая состоит из уникального сочетания числовых и вербальных тестов, позволяющих работодателю определить уровень логических и математических способностей сотрудника или претендента на должность.
+					p Кроме того, благодаря SHL-тестированию выявляется способность к аналитическому мышлению, восприятию словесной информации, поиску необходимых данных за ограниченный промежуток времени.
+						strong Сдаем числовые shl тесты, вербальные – это наша основная специализация.
+				+e.videos.js-videos-container
+					+e.videos-row.row
+						+e.videos-col
+							+videoBlock('Как сдать числовой тест SHL: факторы успеха', 'pass__video')
+						+e.videos-col
+							+videoBlock('Как сдать вербальный тест: к чему готовиться?', 'pass__video')
+
+				+e.text
+					p Существует множество причин, по которым пройти SHL тесты рядовому сотруднику крайне сложно. Можно пытаться искат и изучать
+						a(href='#!') ответы к тестам
+						= ' '
+						| , но как правило это бесполезное занятие. Вместе с тем, сотрудник может обладать высоким уровнем квалификации, однако, SHL-тестирование лишь определяет уровень интеллекта, игнорируя при этом такие важные для персонала качества как воображение, креативное мышление, творческий подход...
+				+e.actions
+					+btn('b', 'Читать продолжение', '_type-3')
+		//end pass
+			
+		//begin testimonials
+		+b.SECTION.testimonials
+			+e.container.container
+				+sectTitle('отзывы', 'Вот что о нас говорят наши клиенты', '_center testimonials__title')
+				+e.slider.slider
+					-i = 0
+					while i < 2
+						+e.item.box-block
+							+e.item-date._color-1
+								+e.SPAN 23.07.18
+							+e.item-inner
+								+e.H6.item-title._color-1
+									+i('left-quote')
+									| Олег Попов
+								p Старая работа выжала меня, как лимон. Хотелось просто выть. Решил найти новую, менее стрессовую. Но там необходимо было пройти SHL тест, а я к такому просто не готов. Благодарен Вашим специалистам, помогли! Результат просто супер.
+
+						+e.item.box-block
+							+e.item-date._color-2
+								+e.SPAN 14.07.18
+							+e.item-inner
+								+e.H6.item-title._color-2
+									+i('left-quote')
+									| Елизавета Горянская
+								p Давно мечтала о хорошей должности в серйоном банке. Образование и опыт позволяли, однако на собеседовании сообщили что нужно пройти этот тест. Я никогда раньше с ним не сталкивалась. Времени учить самостоятельно не было, поэтому решила обратиться к Вам. Сделали все на высшем уровне. Спасибо! Давно мечтала о хорошей должности в серйоном банке. Образование и опыт позволяли, однако на собеседовании сообщили что нужно пройти этот тест. Я никогда раньше с ним не сталкивалась. Времени учить самостоятельно не было, поэтому решила обратиться к Вам. Сделали все на высшем уровне. Спасибо!
+
+						+e.item.box-block
+							+e.item-date._color-3
+								+e.SPAN 05.07.18
+							+e.item-inner
+								+e.H6.item-title._color-3
+									+i('left-quote')
+									| Константин Багенский
+								p Заказал тесты, сделали быстро. Сервис у Вас на высшем уровне, что очень радует. Не ожидал такого, если честно. Отдельное спасибо Игорю за консультацию и за то, что объяснил мне что нада зделать чтобы все прошло гладко. Очень рад сотрудничеству.
+						-i++
+
+				+e.actions
+					+btn('b', 'Добавить отзыв', '_type-3')
+		//end testimonials
+			
+		//begin contact
+		+b.SECTION.contacts
+			+e.container.container
+				+sectTitle('Контакты', 'Остались вопросы? Пиши или заказывай решение SHL теста', '_center contact__title')
+		//end contact
+
+	//end main

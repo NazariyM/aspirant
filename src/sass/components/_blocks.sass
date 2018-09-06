@@ -1,0 +1,112 @@
+// *** begin contact-block *** //
+.contact-block
+   display: flex
+   align-items: center
+   line-height: 1
+   &__link
+      display: flex
+      align-items: flex-end
+      font-size: 14px
+      color: $color3
+      svg
+         margin-right: 11px
+         fill: currentColor
+         transition: .3s ease-in-out
+   &__social
+      +f('gp500', 12)
+      &-link
+         text-shadow: 0 0 20px rgba(104, 193, 221, 0.2)
+         color: $color5
+         svg
+            fill: $color5
+            box-shadow: 0 0 20px rgba(104, 193, 221, 0.2)
+   &__btn
+      color: #fff
+// end contact-block //
+
+// *** begin video-block *** //
+.video-block
+   $parent: &
+   position: relative
+   display: flex
+   align-items: flex-end
+   justify-content: center
+   padding-bottom: 30px
+   height: 250px
+   border-radius: 4px
+   overflow: hidden
+   transition: .3s ease-in-out
+   box-shadow: 0 15px 40px rgba(18, 3, 58, 0.15)
+   &:hover
+      transform: translateY(-10px)
+   &.is-active
+      &::after
+         opacity: 0
+   &::after
+      +coverdiv
+      pointer-events: none
+      background-color: $color2
+      transition: .3s ease-in-out
+      content: ''
+   &__video
+      +coverdiv
+      width: 100%
+      height: 100%
+      +cover-video
+   &__play-btn
+      +vcenter
+      z-index: 1
+      +trs
+      .is-active &
+         opacity: 0
+         pointer-events: none
+      &:hover svg
+         transform: scale(1.2)
+      &-icon
+         width: 30px
+         height: 32px
+         fill: $white
+         +trs
+   &__text
+      max-width: 240px
+      z-index: 1
+      color: #fff
+      font-size: 16px
+      line-height: 24px
+      text-align: center
+      transition: .3s ease-in-out
+      .is-active &
+         pointer-events: none
+         opacity: 0
+         transform: translateY(100%)
+   &__corner
+      position: absolute
+      width: 20px
+      height: 20px
+      z-index: 1
+      border-style: solid
+      border-color: $color3
+      transition: .3s ease-in-out
+      #{$parent}:hover &
+         opacity: 0
+         
+      .is-active &
+         pointer-events: none
+         opacity: 0
+      &_top
+         top: 20px
+         left: 20px
+         border-left-width: 1px
+         border-top-width: 1px
+         #{$parent}:hover &
+            top: 0
+            left: 0
+      &_bot
+         bottom: 20px
+         right: 20px
+         border-bottom-width: 1px
+         border-right-width: 1px
+         #{$parent}:hover &
+            right: 0
+            bottom: 0
+// end video-block //
