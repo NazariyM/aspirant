@@ -28,18 +28,18 @@
 			+e.NAV.nav
 				-
 					navList = [
-					'О нас',
-					'Услуги и цены',
-					'Как мы работаем',
-					'Обучение',
-					'Отзывы',
-					'Контакты'
+					['О нас', 'about'],
+					['Услуги и цены', 'services'],
+					['Как мы работаем', 'how-to'],
+					['Обучение', 'train'],
+					['Отзывы', 'testimonials'],
+					['Контакты', 'contact']
 					]
 				+e.UL.nav-list
 					for navLink in navList
-						li: a(href='#!')
-							span= navLink
-							span= navLink
+						li: a(href=`#${navLink[1]}`)
+							span= navLink[0]
+							span= navLink[0]
 
 			+e.BUTTON.nav-btn(type='button')
 				+e.SPAN.nav-btn-burger

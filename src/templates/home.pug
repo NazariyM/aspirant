@@ -31,7 +31,7 @@ block content
 		//end screen
 
 		//begin about
-		+b.SECTION.about(style='background-image: url(img/bg/bg_particles-1.svg)')
+		+b.SECTION.about#about(style='background-image: url(img/bg/bg_particles-1.svg)')
 			+e.container.container
 				+e.text
 					+sectTitle('о нас', 'Кто поможет Вам пройти SHL тесты без предоплаты?', '_left about__title')
@@ -44,7 +44,7 @@ block content
 		//end about
 
 		//begin services
-		+b.SECTION.services
+		+b.SECTION.services#services
 			+e.container.container
 				+sectTitle('услуги и Цены', 'Виды и стоимость прохождения SHL тестов', '_center services__title')
 
@@ -248,7 +248,7 @@ block content
 		//end services
 
 		//begin how-to
-		+b.SECTION.how-to
+		+b.SECTION.how-to#how-to
 			+e.container.container
 				+sectTitle('как мы работаем', 'Пройти SHL тесты очень просто', '_center how-to__title')
 				+e.row.row
@@ -271,7 +271,7 @@ block content
 		//end how-to
 
 		//begin train
-		+b.SECTION.train
+		+b.SECTION.train#train
 			+e.container.container
 				+e.img(style='background-image: url(img/bg/train_bg.png)')
 				+e.text
@@ -290,7 +290,7 @@ block content
 		//end train
 
 		//begin pass
-		+b.SECTION.pass
+		+b.SECTION.pass#pass
 			+e.container.container
 				+sectTitle('Как сдать SHL тест?', 'Пройти тесты SHL по доступной цене без предоплаты не сложно', '_left _md pass__title')
 				+e.text
@@ -309,12 +309,16 @@ block content
 						a(href='#!') ответы к тестам
 						= ' '
 						| , но как правило это бесполезное занятие. Вместе с тем, сотрудник может обладать высоким уровнем квалификации, однако, SHL-тестирование лишь определяет уровень интеллекта, игнорируя при этом такие важные для персонала качества как воображение, креативное мышление, творческий подход...
+				+e.text._hidden
+					p Именно по этой причине большое количество талантливых сотрудников отсеивается на этапе этого сухого математического тестирования. Мы, будучи аспирантами с техническим складом ума, можем помочь в решении этой проблемы. Если Вы беспокоитесь за успешное прохождение SHL-тестов, то мы запросто пройдем SHL тесты за вас с 100% гарантией результата. Не ищите примеры теcтов SHL. В нашем арсенале уже имеется довольно большой послужной список сдачи SHL-тестирования для сотрудников самых разных компаний. Для успешного решения SHL тестов у нас есть не только необходимые знания, но и опыт.
+					p Прохождение SHL теста по работе теперь для вас не будет никакой проблемой и поводом для беспокойства. Стоит ли говорить, что если Вы не уверенны в своих силах, то лучше обратиться к тем, кто в них уверен. Ведь на кон поставлена Ваша успешная  карьера, а это очень серьезная ставка. Жизненные реалии таковы, что в ряде случаев выгоднее заказать сдачу SHL тестов или купить прохождение SHL теста, чем рисковать собственной карьерой. Цены на SHL тесты варьируются. Стоимость сдачи зависит от их вида: вербальные SHL тесты дешевле, числовые SHL тесты дороже. Для того чтобы пройти shl тесты для своей работы, вам нужно посмотреть цены и оформить заказ на сдачу SHL тестирования. Мы оперативно отвечаем на заказы, консультируем обо всех нюансах и проходим shl тесты любого уровня сложности с абсолютной гарантией результата.
+
 				+e.actions
-					+btn('b', 'Читать продолжение', '_type-2')
+					+btn('b', 'Читать продолжение', '_type-2 js-expand-btn')
 		//end pass
 
 		//begin testimonials
-		+b.SECTION.testimonials(style='background-image: url(img/bg/bg_particles-2.svg)')
+		+b.SECTION.testimonials#testimonials(style='background-image: url(img/bg/bg_particles-2.svg)')
 			+e.container.container
 				+sectTitle('отзывы', 'Вот что о нас говорят наши клиенты', '_center testimonials__title')
 				+e.slider.slider
@@ -356,7 +360,7 @@ block content
 		//end testimonials
 
 		//begin contact
-		+b.SECTION.contact
+		+b.SECTION.contact#contact
 			+e.container.container
 				+sectTitle('Контакты', 'Остались вопросы?', '_center _white contact__title', 'Пиши или заказывай решение SHL теста')
 

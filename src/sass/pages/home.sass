@@ -122,14 +122,14 @@
          flex: 0 1 calc(100% - 220px)
          padding-left: 35px
          &-text
-            height: 292px
+            height: 300px
             font-size: 18px
             line-height: 28px
             p
                &:not(:last-child)
                   margin-bottom: 18px
             &-inner
-               padding-top: 15px
+               padding: 15px 25px 0 0
          .mCSB_scrollTools
             right: -7px
       &-corner
@@ -216,7 +216,7 @@
          font-size: 14px
          li
       &-actions
-         margin-top: 30px
+         margin-top: 20px
          &-btn
             margin-right: 56px
             padding: 14px 40px 13px
@@ -368,13 +368,15 @@
       margin-bottom: 44px
    &__text
       &:not(:last-child)
-         margin-bottom: 45px
+         margin-bottom: 15px
       p
          &:not(:last-child)
             margin-bottom: 15px
+      &_hidden
+         display: none
    &__videos
       max-width: 1000px
-      margin: 0 auto 44px
+      margin: 45px auto
       &-row
          margin: 0 -20px
       &-col
@@ -404,7 +406,7 @@
             &::after
                right: 0
    &__actions
-      margin-top: -13px
+      margin-top: 30px
       text-align: center
 // end pass //
 

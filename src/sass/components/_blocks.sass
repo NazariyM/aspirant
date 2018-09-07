@@ -6,6 +6,7 @@
    line-height: 1
    &_header
       padding: 0 10px 0 20px
+      justify-content: space-between
    &__link
       display: flex
       align-items: inherit
@@ -31,14 +32,12 @@
       &-links
          +f('gp500')
          #{$parent}_header &
-            margin: 0 70px
             font-size: 12px
          #{$parent}_footer &
             margin-right: 44px
             font-size: 14px
       &-icons
          #{$parent}_header &
-            margin-right: 70px
          #{$parent}_footer &
             margin-left: 48px
       
@@ -70,7 +69,6 @@
             fill: $color5
    &__btn
       flex: 0 1 210px
-      margin-left: auto
       color: #fff
       font-size: 14px
 // end contact-block //
