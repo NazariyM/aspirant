@@ -159,4 +159,19 @@
          #{$parent}:hover &
             right: 0
             bottom: 0
+   &__decor-triangle
+      pointer-events: none
+      position: absolute
+      top: 50%
+      left: 50%
+      z-index: 1
+      fill: rgba($white, .1)
+      width: 286px
+      height: 274px
+      margin-top: -143px
+      margin-left: -137px
+      animation: rotating 30s linear infinite
+      transition: .3s ease-in-out
+      .is-active &
+         opacity: 0
 // end video-block //

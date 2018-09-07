@@ -56,7 +56,18 @@ body
          color: #fff
       #{$parent}_md &
          font-size: 36px
-         
+   &__icon
+      position: absolute
+      top: 27px
+      transform: rotate(-7deg)
+      margin-left: -40px
+      width: 80px
+      height: 80px
+      fill: rgba(#d2c8ec, .3)
+      #{$parent}_center &
+         left: 50%
+      #{$parent}_left &
+         left: 30px
 
 .btn
    position: relative
@@ -121,7 +132,7 @@ body
          border: 1px solid rgba(#5f3cb7, .15)
    &_type-4
       position: relative
-      padding: 16px 55px 15px 40px
+      padding: 16px 61px 15px 33px
       box-shadow: 0 15px 40px rgba(18, 3, 58, 0.15), 0 0 20px rgba(104, 193, 221, 0.2)
       background-color: $color5
       +f('gp700', 16)
@@ -134,7 +145,7 @@ body
          width: 8px
          height: 8px
          fill: $white
-
+         
 .circled-list
    li
       &::before
@@ -178,3 +189,7 @@ strong
    background-color: $color6
 .mCSB_scrollTools .mCSB_draggerRail
    background-color: rgba($color3, .1)
+
+.decor-img
+   position: absolute
+   z-index: -1

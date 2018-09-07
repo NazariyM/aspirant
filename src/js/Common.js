@@ -22,10 +22,12 @@ export class Common {
   expandText() {
     const $btn = $('.js-expand-btn');
 
-    $btn.on('click', (e) => {
-      const $this = $(e.currentTarget);
-      $this.parent().prev().slideDown();
-      $this.fadeOut();
+    $btn.each(function (i, $btn) {
+      $($btn).on('click', (e) => {
+        const $this = $(e.currentTarget);
+        $this.parent().prev().slideDown();
+        $this.parent().addClass('hidden');
+      });
     });
   }
 }

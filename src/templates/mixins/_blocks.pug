@@ -7,6 +7,7 @@ mixin btn(type, text, classMod)
 
 mixin sectTitle(label, text, classMod, text2)
 	+b.section-title(class= classMod)
+		+i('decor-triangle', 'section-title__icon')
 		+e.SPAN.label= label
 		+e.H2.text= text
 		if text2
@@ -21,3 +22,4 @@ mixin videoBlock(text, classMod)
 		+e.P.text= text
 		+e.corner._top
 		+e.corner._bot
+		+i('decor-triangle', 'video-block__decor-triangle')

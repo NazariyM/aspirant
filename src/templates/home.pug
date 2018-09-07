@@ -10,6 +10,8 @@ block content
 
 		//begin screen
 		+b.SECTION.screen
+			+e.IMG.decor._1.decor-img(src='img/decor/decor_1.svg' alt='image')
+			+e.IMG.decor._2.decor-img(src='img/decor/decor_2.svg' alt='image')
 			+e.container.container
 				+e.triangle.triangle
 				+e.inner
@@ -45,6 +47,7 @@ block content
 
 		//begin services
 		+b.SECTION.services#services
+			+e.IMG.decor.decor-img(src='img/decor/decor_3.svg' alt='image')
 			+e.container.container
 				+sectTitle('услуги и Цены', 'Виды и стоимость прохождения SHL тестов', '_center services__title')
 
@@ -272,6 +275,7 @@ block content
 
 		//begin train
 		+b.SECTION.train#train
+			+e.IMG.decor.decor-img(src='img/decor/decor_4.svg' alt='image')
 			+e.container.container
 				+e.img(style='background-image: url(img/bg/train_bg.png)')
 				+e.text
@@ -313,12 +317,13 @@ block content
 					p Именно по этой причине большое количество талантливых сотрудников отсеивается на этапе этого сухого математического тестирования. Мы, будучи аспирантами с техническим складом ума, можем помочь в решении этой проблемы. Если Вы беспокоитесь за успешное прохождение SHL-тестов, то мы запросто пройдем SHL тесты за вас с 100% гарантией результата. Не ищите примеры теcтов SHL. В нашем арсенале уже имеется довольно большой послужной список сдачи SHL-тестирования для сотрудников самых разных компаний. Для успешного решения SHL тестов у нас есть не только необходимые знания, но и опыт.
 					p Прохождение SHL теста по работе теперь для вас не будет никакой проблемой и поводом для беспокойства. Стоит ли говорить, что если Вы не уверенны в своих силах, то лучше обратиться к тем, кто в них уверен. Ведь на кон поставлена Ваша успешная  карьера, а это очень серьезная ставка. Жизненные реалии таковы, что в ряде случаев выгоднее заказать сдачу SHL тестов или купить прохождение SHL теста, чем рисковать собственной карьерой. Цены на SHL тесты варьируются. Стоимость сдачи зависит от их вида: вербальные SHL тесты дешевле, числовые SHL тесты дороже. Для того чтобы пройти shl тесты для своей работы, вам нужно посмотреть цены и оформить заказ на сдачу SHL тестирования. Мы оперативно отвечаем на заказы, консультируем обо всех нюансах и проходим shl тесты любого уровня сложности с абсолютной гарантией результата.
 
-				+e.actions
+				+e.actions.expand-block
 					+btn('b', 'Читать продолжение', '_type-2 js-expand-btn')
 		//end pass
 
 		//begin testimonials
 		+b.SECTION.testimonials#testimonials(style='background-image: url(img/bg/bg_particles-2.svg)')
+			+e.IMG.decor.decor-img(src='img/decor/decor_5.svg' alt='image')
 			+e.container.container
 				+sectTitle('отзывы', 'Вот что о нас говорят наши клиенты', '_center testimonials__title')
 				+e.slider.slider
@@ -361,6 +366,10 @@ block content
 
 		//begin contact
 		+b.SECTION.contact#contact
+			+e.IMG.decor._1.decor-img(src='img/decor/decor_6.svg' alt='image')
+			+e.IMG.decor._2.decor-img(src='img/decor/decor_7.svg' alt='image')
+			+i('decor-triangle', 'contact__decor-triangle contact__decor-triangle_1')
+			+i('decor-triangle', 'contact__decor-triangle contact__decor-triangle_2')
 			+e.container.container
 				+sectTitle('Контакты', 'Остались вопросы?', '_center _white contact__title', 'Пиши или заказывай решение SHL теста')
 
