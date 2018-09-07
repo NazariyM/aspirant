@@ -14,21 +14,23 @@
     <header class="header">
       <div class="header__contact">
         <div class="header__contact-container container">
-          <div class="contact-block">
+          <div class="contact-block contact-block_header">
             <a class="contact-block__link" href="tel:+7 922 039 09 69">
               <svg class="icon icon-tel ">
                 <use xlink:href="img/sprite.svg#icon-tel"></use>
               </svg>+7 922 039 09 69</a>
-            <div class="contact-block__social">
+            <div class="contact-block__social-links">
               <a class="contact-block__social-link" href="#!" target="_blank">Telegram</a>
               <a class="contact-block__social-link" href="#!" target="_blank">Viber</a>
               <a class="contact-block__social-link" href="#!" target="_blank">Whatsapp</a>
-              <a class="contact-block__social-link" href="#!" target="_blank">
+            </div>
+            <div class="contact-block__social-icons">
+              <a class="contact-block__social-icon" href="#!" target="_blank">
                 <svg class="icon icon-vk ">
                   <use xlink:href="img/sprite.svg#icon-vk"></use>
                 </svg>
               </a>
-              <a class="contact-block__social-link" href="#!" target="_blank">
+              <a class="contact-block__social-icon" href="#!" target="_blank">
                 <svg class="icon icon-yt ">
                   <use xlink:href="img/sprite.svg#icon-yt"></use>
                 </svg>
@@ -125,7 +127,7 @@
       </section>
       <!--end screen-->
       <!--begin about-->
-      <section class="about">
+      <section class="about" style="background-image: url(img/bg/bg_particles-1.svg)">
         <div class="about__container container">
           <div class="about__text">
             <div class="section-title section-title_left about__title">
@@ -150,7 +152,7 @@
             <h2 class="section-title__text">Виды и стоимость прохождения SHL тестов</h2>
           </div>
           <div class="services__row row">
-            <div class="services__item box-block">
+            <div class="services__item box-block" onclick="">
               <div class="services__item-corner services__item-corner_top"></div>
               <div class="services__item-corner services__item-corner_bot"></div>
               <div class="services__item-inner">
@@ -164,7 +166,7 @@
                 </div>
               </div>
             </div>
-            <div class="services__item box-block">
+            <div class="services__item box-block" onclick="">
               <div class="services__item-corner services__item-corner_top"></div>
               <div class="services__item-corner services__item-corner_bot"></div>
               <div class="services__item-inner">
@@ -178,7 +180,7 @@
                 </div>
               </div>
             </div>
-            <div class="services__item box-block">
+            <div class="services__item box-block" onclick="">
               <div class="services__item-corner services__item-corner_top"></div>
               <div class="services__item-corner services__item-corner_bot"></div>
               <div class="services__item-inner">
@@ -188,11 +190,11 @@
                 <div class="services__item-text">
                   <h3 class="services__item-title">Вербальные</h3>
                   <h5 class="services__item-price">
-                    <span>2000</span> руб.</h5>
+                    <span>2 000</span> руб.</h5>
                 </div>
               </div>
             </div>
-            <div class="services__item box-block">
+            <div class="services__item box-block" onclick="">
               <div class="services__item-corner services__item-corner_top"></div>
               <div class="services__item-corner services__item-corner_bot"></div>
               <div class="services__item-inner">
@@ -202,11 +204,11 @@
                 <div class="services__item-text">
                   <h3 class="services__item-title">Сдача через TeamViewer</h3>
                   <h5 class="services__item-price">
-                    <span>2000</span> руб.</h5>
+                    <span>2 000</span> руб.</h5>
                 </div>
               </div>
             </div>
-            <div class="services__item box-block">
+            <div class="services__item box-block" onclick="">
               <div class="services__item-corner services__item-corner_top"></div>
               <div class="services__item-corner services__item-corner_bot"></div>
               <div class="services__item-inner">
@@ -220,20 +222,213 @@
                 </div>
               </div>
             </div>
-            <div class="services__item box-block">
+            <div class="services__item box-block" onclick="">
               <div class="services__item-corner services__item-corner_top"></div>
               <div class="services__item-corner services__item-corner_bot"></div>
               <div class="services__item-inner">
                 <div class="services__item-icon-wrap">
                   <div class="services__item-icon icon-discount"></div>
                 </div>
-                <div class="services__item-text">
-                  <h3 class="services__item-title">Cкидка</h3>
-                  <span>20%</span>
+                <div class="services__item-text services__item-text_has-list">
+                  <h3 class="services__item-title">Cкидка
+                    <span>20%</span>
+                  </h3>
                   <ul class="services__item-list circled-list">
                     <li>При оплате вперёд</li>
                     <li>Обращение с другом</li>
                   </ul>
+                </div>
+              </div>
+            </div>
+            <div class="services__content">
+              <div class="services__slider js-slider">
+                <div class="services__item services__item_full box-block">
+                  <div class="services__item-corner services__item-corner_top"></div>
+                  <div class="services__item-corner services__item-corner_bot"></div>
+                  <div class="services__item-inner">
+                    <div class="services__item-col">
+                      <div class="services__item-icon-wrap">
+                        <div class="services__item-icon icon-numbers"></div>
+                      </div>
+                      <div class="services__item-text">
+                        <h3 class="services__item-title">Числовой тест
+                          <h5 class="services__item-price">
+                            <span>2 000</span> руб.</h5>
+                        </h3>
+                      </div>
+                    </div>
+                    <div class="services__item-info">
+                      <div class="services__item-info-text js-custom-scroll">
+                        <div class="services__item-info-text-inner">
+                          <p>Числовой тест включает в себя вопросы из раздела таких наук как финансовая математика, статистика, экономика, демография.</p>
+                          <p>Числовой тест ограничен во времени и требует быстрого анализа и обработки информации.</p>
+                          <p>Тест бывает адаптивным, и если Вы дали неверный ответ на вопрос, то следующий вопрос будет более лёгким. Если же Вы дали правильный ответ, то следующий вопрос будет сложнее.</p>
+                          <p>Если Вы не уверены в своих силах - обращайтесь за помощью.</p>
+                        </div>
+                      </div>
+                      <div class="services__item-actions">
+                        <button class="services__btn btn btn_type-3 services__item-actions-btn" type="button">Заказать прохождение</button>
+                        <button class="services__content-close" type="button">Закрыть</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="services__item services__item_full box-block">
+                  <div class="services__item-corner services__item-corner_top"></div>
+                  <div class="services__item-corner services__item-corner_bot"></div>
+                  <div class="services__item-inner">
+                    <div class="services__item-col">
+                      <div class="services__item-icon-wrap">
+                        <div class="services__item-icon icon-faces"></div>
+                      </div>
+                      <div class="services__item-text">
+                        <h3 class="services__item-title">Личностный опросник
+                          <h5 class="services__item-price">
+                            <span>2 500</span> руб.</h5>
+                        </h3>
+                      </div>
+                    </div>
+                    <div class="services__item-info">
+                      <div class="services__item-info-text js-custom-scroll">
+                        <div class="services__item-info-text-inner">
+                          <p>Числовой тест включает в себя вопросы из раздела таких наук как финансовая математика, статистика, экономика, демография.</p>
+                          <p>Числовой тест ограничен во времени и требует быстрого анализа и обработки информации.</p>
+                          <p>Тест бывает адаптивным, и если Вы дали неверный ответ на вопрос, то следующий вопрос будет более лёгким. Если же Вы дали правильный ответ, то следующий вопрос будет сложнее.</p>
+                          <p>Если Вы не уверены в своих силах - обращайтесь за помощью.</p>
+                          <p>Числовой тест включает в себя вопросы из раздела таких наук как финансовая математика, статистика, экономика, демография.
+                            <p>Числовой тест ограничен во времени и требует быстрого анализа и обработки информации.</p>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="services__item-actions">
+                        <button class="services__btn btn btn_type-3 services__item-actions-btn" type="button">Заказать прохождение</button>
+                        <button class="services__content-close" type="button">Закрыть</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="services__item services__item_full box-block">
+                  <div class="services__item-corner services__item-corner_top"></div>
+                  <div class="services__item-corner services__item-corner_bot"></div>
+                  <div class="services__item-inner">
+                    <div class="services__item-col">
+                      <div class="services__item-icon-wrap">
+                        <div class="services__item-icon icon-speech-bubbles"></div>
+                      </div>
+                      <div class="services__item-text">
+                        <h3 class="services__item-title">Вербальные
+                          <h5 class="services__item-price">
+                            <span>2 000</span> руб.</h5>
+                        </h3>
+                      </div>
+                    </div>
+                    <div class="services__item-info">
+                      <div class="services__item-info-text js-custom-scroll">
+                        <div class="services__item-info-text-inner">
+                          <p>Числовой тест включает в себя вопросы из раздела таких наук как финансовая математика, статистика, экономика, демография.</p>
+                          <p>Числовой тест ограничен во времени и требует быстрого анализа и обработки информации.</p>
+                          <p>Тест бывает адаптивным, и если Вы дали неверный ответ на вопрос, то следующий вопрос будет более лёгким. Если же Вы дали правильный ответ, то следующий вопрос будет сложнее.</p>
+                          <p>Если Вы не уверены в своих силах - обращайтесь за помощью.</p>
+                        </div>
+                      </div>
+                      <div class="services__item-actions">
+                        <button class="services__btn btn btn_type-3 services__item-actions-btn" type="button">Заказать прохождение</button>
+                        <button class="services__content-close" type="button">Закрыть</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="services__item services__item_full box-block">
+                  <div class="services__item-corner services__item-corner_top"></div>
+                  <div class="services__item-corner services__item-corner_bot"></div>
+                  <div class="services__item-inner">
+                    <div class="services__item-col">
+                      <div class="services__item-icon-wrap">
+                        <div class="services__item-icon icon-team-viewer"></div>
+                      </div>
+                      <div class="services__item-text">
+                        <h3 class="services__item-title">Сдача через TeamViewer
+                          <h5 class="services__item-price">
+                            <span>2 000</span> руб.</h5>
+                        </h3>
+                      </div>
+                    </div>
+                    <div class="services__item-info">
+                      <div class="services__item-info-text js-custom-scroll">
+                        <div class="services__item-info-text-inner">
+                          <p>Числовой тест включает в себя вопросы из раздела таких наук как финансовая математика, статистика, экономика, демография.</p>
+                          <p>Числовой тест ограничен во времени и требует быстрого анализа и обработки информации.</p>
+                          <p>Тест бывает адаптивным, и если Вы дали неверный ответ на вопрос, то следующий вопрос будет более лёгким. Если же Вы дали правильный ответ, то следующий вопрос будет сложнее.</p>
+                          <p>Если Вы не уверены в своих силах - обращайтесь за помощью.</p>
+                        </div>
+                      </div>
+                      <div class="services__item-actions">
+                        <button class="services__btn btn btn_type-3 services__item-actions-btn" type="button">Заказать прохождение</button>
+                        <button class="services__content-close" type="button">Закрыть</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="services__item services__item_full box-block">
+                  <div class="services__item-corner services__item-corner_top"></div>
+                  <div class="services__item-corner services__item-corner_bot"></div>
+                  <div class="services__item-inner">
+                    <div class="services__item-col">
+                      <div class="services__item-icon-wrap">
+                        <div class="services__item-icon icon-video-camera"></div>
+                      </div>
+                      <div class="services__item-text">
+                        <h3 class="services__item-title">Видеозапись сдачи теста
+                          <h5 class="services__item-price">
+                            <span>500</span> руб.</h5>
+                        </h3>
+                      </div>
+                    </div>
+                    <div class="services__item-info">
+                      <div class="services__item-info-text js-custom-scroll">
+                        <div class="services__item-info-text-inner">
+                          <p>Числовой тест включает в себя вопросы из раздела таких наук как финансовая математика, статистика, экономика, демография.</p>
+                          <p>Числовой тест ограничен во времени и требует быстрого анализа и обработки информации.</p>
+                          <p>Тест бывает адаптивным, и если Вы дали неверный ответ на вопрос, то следующий вопрос будет более лёгким. Если же Вы дали правильный ответ, то следующий вопрос будет сложнее.</p>
+                          <p>Если Вы не уверены в своих силах - обращайтесь за помощью.</p>
+                        </div>
+                      </div>
+                      <div class="services__item-actions">
+                        <button class="services__btn btn btn_type-3 services__item-actions-btn" type="button">Заказать прохождение</button>
+                        <button class="services__content-close" type="button">Закрыть</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="services__item services__item_full box-block">
+                  <div class="services__item-corner services__item-corner_top"></div>
+                  <div class="services__item-corner services__item-corner_bot"></div>
+                  <div class="services__item-inner">
+                    <div class="services__item-col">
+                      <div class="services__item-icon-wrap">
+                        <div class="services__item-icon icon-discount"></div>
+                      </div>
+                      <div class="services__item-text">
+                        <h3 class="services__item-title">Cкидка
+                          <span>20%</span>
+                        </h3>
+                      </div>
+                    </div>
+                    <div class="services__item-info">
+                      <div class="services__item-info-text js-custom-scroll">
+                        <div class="services__item-info-text-inner">
+                          <p>Числовой тест включает в себя вопросы из раздела таких наук как финансовая математика, статистика, экономика, демография.</p>
+                          <p>Числовой тест ограничен во времени и требует быстрого анализа и обработки информации.</p>
+                          <p>Тест бывает адаптивным, и если Вы дали неверный ответ на вопрос, то следующий вопрос будет более лёгким. Если же Вы дали правильный ответ, то следующий вопрос будет сложнее.</p>
+                          <p>Если Вы не уверены в своих силах - обращайтесь за помощью.</p>
+                        </div>
+                      </div>
+                      <div class="services__item-actions">
+                        <button class="services__btn btn btn_type-3 services__item-actions-btn" type="button">Заказать прохождение</button>
+                        <button class="services__content-close" type="button">Закрыть</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -271,7 +466,7 @@
               <div class="how-to__item-icon-wrap how-to__item-icon-wrap_color-1">
                 <div class="how-to__item-icon icon-credit-card"></div>
               </div>
-              <p class="how-to__item-text">Узнаете результаты у работодателя. Вы сдали!</p>
+              <p class="how-to__item-text">Оплачиваете наши услуги в течение недели</p>
             </div>
           </div>
         </div>
@@ -308,7 +503,7 @@
       <!--begin pass-->
       <section class="pass">
         <div class="pass__container container">
-          <div class="section-title section-title_left pass__title">
+          <div class="section-title section-title_left section-title_md pass__title">
             <span class="section-title__label">Как сдать SHL тест?</span>
             <h2 class="section-title__text">Пройти тесты SHL по доступной цене без предоплаты не сложно</h2>
           </div>
@@ -358,13 +553,13 @@
               качества как воображение, креативное мышление, творческий подход...</p>
           </div>
           <div class="pass__actions">
-            <button class="pass__btn btn btn_type-3" type="button">Читать продолжение</button>
+            <button class="pass__btn btn btn_type-2" type="button">Читать продолжение</button>
           </div>
         </div>
       </section>
       <!--end pass-->
       <!--begin testimonials-->
-      <section class="testimonials">
+      <section class="testimonials" style="background-image: url(img/bg/bg_particles-2.svg)">
         <div class="testimonials__container container">
           <div class="section-title section-title_center testimonials__title">
             <span class="section-title__label">отзывы</span>
@@ -380,7 +575,9 @@
                   <svg class="icon icon-left-quote ">
                     <use xlink:href="img/sprite.svg#icon-left-quote"></use>
                   </svg>Олег Попов</h6>
-                <p>Старая работа выжала меня, как лимон. Хотелось просто выть. Решил найти новую, менее стрессовую. Но там необходимо было пройти SHL тест, а я к такому просто не готов. Благодарен Вашим специалистам, помогли! Результат просто супер.</p>
+                <div class="testimonials__item-text js-custom-scroll">
+                  <p>Старая работа выжала меня, как лимон. Хотелось просто выть. Решил найти новую, менее стрессовую. Но там необходимо было пройти SHL тест, а я к такому просто не готов. Благодарен Вашим специалистам, помогли! Результат просто супер.</p>
+                </div>
               </div>
             </div>
             <div class="testimonials__item box-block">
@@ -392,9 +589,11 @@
                   <svg class="icon icon-left-quote ">
                     <use xlink:href="img/sprite.svg#icon-left-quote"></use>
                   </svg>Елизавета Горянская</h6>
-                <p>Давно мечтала о хорошей должности в серйоном банке. Образование и опыт позволяли, однако на собеседовании сообщили что нужно пройти этот тест. Я никогда раньше с ним не сталкивалась. Времени учить самостоятельно не было, поэтому решила
-                  обратиться к Вам. Сделали все на высшем уровне. Спасибо! Давно мечтала о хорошей должности в серйоном банке. Образование и опыт позволяли, однако на собеседовании сообщили что нужно пройти этот тест. Я никогда раньше с ним не сталкивалась.
-                  Времени учить самостоятельно не было, поэтому решила обратиться к Вам. Сделали все на высшем уровне. Спасибо!</p>
+                <div class="testimonials__item-text js-custom-scroll">
+                  <p>Давно мечтала о хорошей должности в серйоном банке. Образование и опыт позволяли, однако на собеседовании сообщили что нужно пройти этот тест. Я никогда раньше с ним не сталкивалась. Времени учить самостоятельно не было, поэтому решила
+                    обратиться к Вам. Сделали все на высшем уровне. Спасибо! Давно мечтала о хорошей должности в серйоном банке. Образование и опыт позволяли, однако на собеседовании сообщили что нужно пройти этот тест. Я никогда раньше с ним не сталкивалась.
+                    Времени учить самостоятельно не было, поэтому решила обратиться к Вам. Сделали все на высшем уровне. Спасибо!</p>
+                </div>
               </div>
             </div>
             <div class="testimonials__item box-block">
@@ -406,7 +605,9 @@
                   <svg class="icon icon-left-quote ">
                     <use xlink:href="img/sprite.svg#icon-left-quote"></use>
                   </svg>Константин Багенский</h6>
-                <p>Заказал тесты, сделали быстро. Сервис у Вас на высшем уровне, что очень радует. Не ожидал такого, если честно. Отдельное спасибо Игорю за консультацию и за то, что объяснил мне что нада зделать чтобы все прошло гладко. Очень рад сотрудничеству.</p>
+                <div class="testimonials__item-text js-custom-scroll">
+                  <p>Заказал тесты, сделали быстро. Сервис у Вас на высшем уровне, что очень радует. Не ожидал такого, если честно. Отдельное спасибо Игорю за консультацию и за то, что объяснил мне что нада зделать чтобы все прошло гладко. Очень рад сотрудничеству.</p>
+                </div>
               </div>
             </div>
             <div class="testimonials__item box-block">
@@ -418,7 +619,9 @@
                   <svg class="icon icon-left-quote ">
                     <use xlink:href="img/sprite.svg#icon-left-quote"></use>
                   </svg>Олег Попов</h6>
-                <p>Старая работа выжала меня, как лимон. Хотелось просто выть. Решил найти новую, менее стрессовую. Но там необходимо было пройти SHL тест, а я к такому просто не готов. Благодарен Вашим специалистам, помогли! Результат просто супер.</p>
+                <div class="testimonials__item-text js-custom-scroll">
+                  <p>Старая работа выжала меня, как лимон. Хотелось просто выть. Решил найти новую, менее стрессовую. Но там необходимо было пройти SHL тест, а я к такому просто не готов. Благодарен Вашим специалистам, помогли! Результат просто супер.</p>
+                </div>
               </div>
             </div>
             <div class="testimonials__item box-block">
@@ -430,9 +633,11 @@
                   <svg class="icon icon-left-quote ">
                     <use xlink:href="img/sprite.svg#icon-left-quote"></use>
                   </svg>Елизавета Горянская</h6>
-                <p>Давно мечтала о хорошей должности в серйоном банке. Образование и опыт позволяли, однако на собеседовании сообщили что нужно пройти этот тест. Я никогда раньше с ним не сталкивалась. Времени учить самостоятельно не было, поэтому решила
-                  обратиться к Вам. Сделали все на высшем уровне. Спасибо! Давно мечтала о хорошей должности в серйоном банке. Образование и опыт позволяли, однако на собеседовании сообщили что нужно пройти этот тест. Я никогда раньше с ним не сталкивалась.
-                  Времени учить самостоятельно не было, поэтому решила обратиться к Вам. Сделали все на высшем уровне. Спасибо!</p>
+                <div class="testimonials__item-text js-custom-scroll">
+                  <p>Давно мечтала о хорошей должности в серйоном банке. Образование и опыт позволяли, однако на собеседовании сообщили что нужно пройти этот тест. Я никогда раньше с ним не сталкивалась. Времени учить самостоятельно не было, поэтому решила
+                    обратиться к Вам. Сделали все на высшем уровне. Спасибо! Давно мечтала о хорошей должности в серйоном банке. Образование и опыт позволяли, однако на собеседовании сообщили что нужно пройти этот тест. Я никогда раньше с ним не сталкивалась.
+                    Времени учить самостоятельно не было, поэтому решила обратиться к Вам. Сделали все на высшем уровне. Спасибо!</p>
+                </div>
               </div>
             </div>
             <div class="testimonials__item box-block">
@@ -444,23 +649,45 @@
                   <svg class="icon icon-left-quote ">
                     <use xlink:href="img/sprite.svg#icon-left-quote"></use>
                   </svg>Константин Багенский</h6>
-                <p>Заказал тесты, сделали быстро. Сервис у Вас на высшем уровне, что очень радует. Не ожидал такого, если честно. Отдельное спасибо Игорю за консультацию и за то, что объяснил мне что нада зделать чтобы все прошло гладко. Очень рад сотрудничеству.</p>
+                <div class="testimonials__item-text js-custom-scroll">
+                  <p>Заказал тесты, сделали быстро. Сервис у Вас на высшем уровне, что очень радует. Не ожидал такого, если честно. Отдельное спасибо Игорю за консультацию и за то, что объяснил мне что нада зделать чтобы все прошло гладко. Очень рад сотрудничеству.</p>
+                </div>
               </div>
             </div>
           </div>
           <div class="testimonials__actions">
-            <button class="testimonials__btn btn btn_type-3" type="button">Добавить отзыв</button>
+            <button class="testimonials__btn btn btn_type-2 testimonials__actions-btn" type="button">Добавить отзыв</button>
           </div>
         </div>
       </section>
       <!--end testimonials-->
       <!--begin contact-->
-      <section class="contacts">
-        <div class="contacts__container container">
-          <div class="section-title section-title_center contact__title">
+      <section class="contact">
+        <div class="contact__container container">
+          <div class="section-title section-title_center section-title_white contact__title">
             <span class="section-title__label">Контакты</span>
-            <h2 class="section-title__text">Остались вопросы? Пиши или заказывай решение SHL теста</h2>
+            <h2 class="section-title__text">Остались вопросы?</h2>
+            <h2 class="section-title__text">Пиши или заказывай решение SHL теста</h2>
           </div>
+          <form class="contact__form form" action="#!" method="POST">
+            <div class="contact__form-row row">
+              <div class="contact__form-field form-field">
+                <input class="form-field__input" type="text" name="" placeholder="Имя" required="required" />
+              </div>
+              <div class="contact__form-field form-field">
+                <input class="form-field__input" type="text" name="" placeholder="Номер телефона..." required="required" />
+              </div>
+              <div class="contact__form-field form-field">
+                <input class="form-field__input" type="text" name="" placeholder="Email..." required="required" />
+              </div>
+            </div>
+            <textarea class="contact__form-textarea textarea" placeholder="Ваше сообщение..." required="required"></textarea>
+            <div class="contact__form-submit-wrap">
+              <label class="contact__form-submit-btn form-submit-btn btn btn_type-1">Отправить заявку
+                <input type="submit" />
+              </label>
+            </div>
+          </form>
         </div>
       </section>
       <!--end contact-->
@@ -468,7 +695,36 @@
     <!--end main-->
     <!--begin footer-->
     <footer class="footer">
-      <div class="footer__container container"></div>
+      <div class="footer__container container container_footer">
+        <p class="footer__text">Аспирант © 2018. Все права защищены</p>
+        <div class="contact-block contact-block_footer">
+          <div class="contact-block__social-links">
+            <a class="contact-block__social-link" href="#!" target="_blank">Telegram</a>
+            <a class="contact-block__social-link" href="#!" target="_blank">Viber</a>
+            <a class="contact-block__social-link" href="#!" target="_blank">Whatsapp</a>
+          </div>
+          <a class="contact-block__link" href="tel:+7 922 039 09 69">
+            <svg class="icon icon-tel ">
+              <use xlink:href="img/sprite.svg#icon-tel"></use>
+            </svg>+7 922 039 09 69</a>
+          <a class="contact-block__link" href="mailto:info@shl-testing.ru">
+            <svg class="icon icon-mail ">
+              <use xlink:href="img/sprite.svg#icon-mail"></use>
+            </svg>info@shl-testing.ru</a>
+          <div class="contact-block__social-icons">
+            <a class="contact-block__social-icon" href="#!" target="_blank">
+              <svg class="icon icon-vk ">
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
+            <a class="contact-block__social-icon" href="#!" target="_blank">
+              <svg class="icon icon-yt ">
+                <use xlink:href="img/sprite.svg#icon-yt"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
     <!--end footer-->
     <!--LOAD SCRIPTS-->

@@ -3,6 +3,7 @@ import { svgIcon } from '../_helpers';
 
 class Sliders {
   constructor() {
+    this.$slider = $('.js-slider');
     this.$testimonialsSld = $('.testimonials__slider');
 
     const iconLeft = svgIcon('sld-arr-l');
@@ -28,7 +29,12 @@ class Sliders {
   }
 
   init() {
+    if (this.$slider.length) this.initSlider();
     if (this.$testimonialsSld.length) this.initTestimonialsSld();
+  }
+
+  initSlider() {
+    this.$slider.slick($.extend({}, this.defaultOptions));
   }
 
   initTestimonialsSld() {

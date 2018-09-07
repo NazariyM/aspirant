@@ -8,11 +8,11 @@
    width: 100%
    z-index: 100
    &__contact
-      padding: 10px 0
+      padding: 15px 0
       background: #6e4cc1
       &-container
    &__line
-      padding: 15px 0
+      padding: 20px 0
       box-shadow: 0 15px 20px rgba(18, 3, 58, 0.07)
       background-color: #7352c5
       &-container
@@ -22,13 +22,14 @@
    &__logo
       display: flex
       align-items: center
+      flex: 0 0 168px
       &-title
-         margin-left: 12px
+         margin-left: 14px
          +f('ex700', 30, 30)
          color: #fff
    &__nav
+      flex: 0 1 848px
       +sm
-         display: flex
          flex-direction: column
          justify-content: center
          position: absolute
@@ -54,14 +55,14 @@
          transition: transform .4s ease, opacity .4s ease, visibility 0s 0s, -webkit-transform .4s ease
       &-list
          display: flex
+         justify-content: space-between
+         margin-right: 14px
          +sm
             flex-direction: column
             justify-content: center
             align-items: center
             overflow: auto
          li
-            &:not(:last-child)
-               margin-right: 60px
             a
                display: block
                position: relative
@@ -78,7 +79,6 @@
                   color: $color3
                   transition: .3s ease-in-out
                   white-space: nowrap
-                  &:nth-child(1)
                   &:nth-child(2)
                      opacity: 0
                      +vcenter

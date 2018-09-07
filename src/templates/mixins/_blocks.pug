@@ -5,10 +5,12 @@ mixin btn(type, text, classMod)
 		when 'b'
 			+e.BUTTON.btn.btn(class= classMod type='button')= text
 
-mixin sectTitle(label, text, classMod)
+mixin sectTitle(label, text, classMod, text2)
 	+b.section-title(class= classMod)
 		+e.SPAN.label= label
 		+e.H2.text= text
+		if text2
+			+e.H2.text= text2
 
 mixin videoBlock(text, classMod)
 	+b.video-block(class= classMod)

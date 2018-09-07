@@ -1,4 +1,5 @@
 body
+   position: relative
    min-width: 320px
    -webkit-font-smoothing: antialiased
    -moz-osx-font-smoothing: grayscale
@@ -28,7 +29,7 @@ body
 .section-title
    $parent: &
    position: relative
-   padding-bottom: 10px
+   padding-bottom: 20px
    &_left
       text-align: left
    &_center
@@ -44,23 +45,40 @@ body
       content: ''
       
    &__label
-      margin-bottom: 5px
       +f('gp700', 12, 12)
       letter-spacing: 2.4px
       color: $color3
       text-transform: uppercase
    &__text
-      +f('ex700', 34, 44)
+      +f('ex700', 34, 36)
       color: $color4
+      #{$parent}_white &
+         color: #fff
+      #{$parent}_md &
+         font-size: 36px
+         
 
 .btn
+   position: relative
    display: inline-block
-   padding: 12px 44px 10px
+   padding: 14px 50px 13px
    outline: 0
-   border-radius: 20px
+   border-radius: 50px
    transition: .3s ease-in-out
-   +f('gp400', 14)
+   +f('gp400', 16)
    line-height: 1.2
+   color: #fff
+   &::after
+      +coverdiv
+      transform: translate(8px, 5px)
+      border-radius: 50px
+      transition: .3s ease-in-out
+      pointer-events: none
+      content: ''
+   &:hover
+      background-color: $color6
+      &::after
+         transform: translate(0)
    &__icon
       &-circle
          position: absolute
@@ -75,18 +93,43 @@ body
          background-color: rgba($white, .3)
          border-radius: 50%
    &_type-1
+      padding: 12px 44px 10px
       box-shadow: 0 15px 40px rgba(18, 3, 58, 0.15)
-      border: 1px solid #ffffff
+      border: 1px solid #fff
+      &::after
+         border: 1px solid rgba($white, .15)
+         content: ''
+      &:hover
+         border-color: rgba($white, .6)
+         &::after
+            border-color: transparent
+            
    &_type-2
-      background: transparent
+      padding: 13px 21px 12px
+      border: 1px solid $color2
+      color: $color2
+      background: $white
+      &::after
+         border: 1px solid rgba($color2, .15)
+      &:hover
+         color: $white
    &_type-3
+      background-color: $color6
+      &:hover
+         background-color: darken($color6, 6)
+      &::after
+         border: 1px solid rgba(#5f3cb7, .15)
    &_type-4
       position: relative
       padding: 16px 55px 15px 40px
       box-shadow: 0 15px 40px rgba(18, 3, 58, 0.15), 0 0 20px rgba(104, 193, 221, 0.2)
-      border-radius: 25px
       background-color: $color5
       +f('gp700', 16)
+      &:hover
+         background-color: darken($color5, 15)
+      &::after
+         display: none
+      
       svg
          width: 8px
          height: 8px
@@ -98,8 +141,8 @@ body
          display: inline-block
          vertical-align: middle
          background-color: currentColor
-         width: 6px
-         height: 6px
+         width: 5px
+         height: 5px
          margin-right: 5px
          border-radius: 50%
          content: ''
@@ -121,6 +164,17 @@ strong
    font-size: 16px
    line-height: 24px
    transition: .3s ease-in-out
-   cursor: default
    &:hover
       transform: translateY(-10px)
+
+// custom scroll
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+   box-shadow: 0 15px 40px rgba(18, 3, 58, 0.15)
+   background-color: $color3
+   opacity: 0.98
+   border-radius: 0
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar
+   background-color: $color6
+.mCSB_scrollTools .mCSB_draggerRail
+   background-color: rgba($color3, .1)

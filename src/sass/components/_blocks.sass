@@ -1,27 +1,78 @@
 // *** begin contact-block *** //
 .contact-block
+   $parent: &
    display: flex
    align-items: center
    line-height: 1
+   &_header
+      padding: 0 10px 0 20px
    &__link
       display: flex
-      align-items: flex-end
+      align-items: inherit
       font-size: 14px
       color: $color3
-      svg
-         margin-right: 11px
-         fill: currentColor
-         transition: .3s ease-in-out
-   &__social
-      +f('gp500', 12)
-      &-link
-         text-shadow: 0 0 20px rgba(104, 193, 221, 0.2)
+      transition: .3s ease-in-out
+      &:hover
          color: $color5
          svg
             fill: $color5
-            box-shadow: 0 0 20px rgba(104, 193, 221, 0.2)
+      #{$parent}_footer &
+         color: $white
+         &:hover
+            color: $color5
+         &:not(:last-of-type)
+            margin-right: 50px
+      svg
+         margin-right: 9px
+         fill: currentColor
+         font-size: 11px
+         transition: .3s ease-in-out
+   &__social
+      &-links
+         +f('gp500')
+         #{$parent}_header &
+            margin: 0 70px
+            font-size: 12px
+         #{$parent}_footer &
+            margin-right: 44px
+            font-size: 14px
+      &-icons
+         #{$parent}_header &
+            margin-right: 70px
+         #{$parent}_footer &
+            margin-left: 48px
+      
+      &-link
+         display: inline-block
+         vertical-align: middle
+         text-shadow: 0 0 20px rgba(104, 193, 221, 0.2)
+         color: $color5
+         line-height: 10px
+         transition: .3s ease-in-out
+         &:not(:last-child)
+            margin-right: 46px
+         &:hover
+            transform: translateY(-5px)
+      &-icon
+         display: inline-block
+         vertical-align: middle
+         transition: .3s ease-in-out
+         font-size: 12px
+         #{$parent}_header &
+            &:not(:last-child)
+               margin-right: 46px
+         #{$parent}_footer &
+            &:not(:last-child)
+               margin-right: 25px
+         &:hover
+            transform: translateY(-5px)
+         svg
+            fill: $color5
    &__btn
+      flex: 0 1 210px
+      margin-left: auto
       color: #fff
+      font-size: 14px
 // end contact-block //
 
 // *** begin video-block *** //
@@ -31,7 +82,7 @@
    display: flex
    align-items: flex-end
    justify-content: center
-   padding-bottom: 30px
+   padding-bottom: 26px
    height: 250px
    border-radius: 4px
    overflow: hidden
@@ -55,6 +106,7 @@
       +cover-video
    &__play-btn
       +vcenter
+      top: 51.5%
       z-index: 1
       +trs
       .is-active &
@@ -89,7 +141,7 @@
       transition: .3s ease-in-out
       #{$parent}:hover &
          opacity: 0
-         
+      
       .is-active &
          pointer-events: none
          opacity: 0

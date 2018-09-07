@@ -73,6 +73,7 @@
     "@fancyapps/fancybox": "^3.4.1",
     "babel-polyfill": "^6.26.0",
     "jscs": "^3.0.7",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
     "npm": "^6.4.0",
     "object-fit-images": "^3.2.3",
     "object-fit-videos": "^1.0.4",
