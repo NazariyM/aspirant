@@ -14,8 +14,8 @@
          height: 100%
          z-index: -1
          filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2))
-         //object-fit: cover
-         //font-family: 'object-fit: cover;'
+         object-fit: cover
+         font-family: 'object-fit: cover;'
       &_2
          z-index: -2
    &__container
@@ -29,23 +29,21 @@
       justify-content: space-between
       max-width: 1006px
       padding-left: 25px
-   &__triangle
+   &__decor-triangle
+      position: absolute
+      top: -60%
+      left: -13%
+      z-index: -1
+      width: 452px
+      height: 434px
+      fill: #7352c5
    &__titles-wrap
       position: relative
       flex: 0 1 400px
       padding-right: 90px
       font-size: 60px
       text-transform: uppercase
-      &::before
-         position: absolute
-         top: -60%
-         left: -13%
-         z-index: -1
-         width: 452px
-         height: 434px
-         background-image: url("../img/decor/decor-triangle-1.png")
-         +cover
-         content: ''
+      
       &::after
          position: absolute
          top: 58px
@@ -563,6 +561,8 @@
       width: 100%
       object-fit: cover
       font-family: 'object-fit: cover;'
+      +r(1919)
+         height: 100%
       &_1
          top: 1px
          z-index: -1
