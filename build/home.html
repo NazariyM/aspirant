@@ -40,7 +40,7 @@
               <svg class="icon icon-mail ">
                 <use xlink:href="img/sprite.svg#icon-mail"></use>
               </svg>info@shl-testing.ru</a>
-            <button class="contact-block__btn btn btn_type-1" type="button">Написать нам</button>
+            <button class="contact-block__btn btn btn_type-1" type="button" data-popup-target="write-us">Написать нам</button>
           </div>
         </div>
       </div>
@@ -514,7 +514,7 @@
                 <span>Skype</span>
               </p>
             </div>
-            <button class="train__btn btn btn_type-3 train__text-btn" type="button">Оставить заявку</button>
+            <button class="train__btn btn btn_type-3 train__text-btn" type="button" data-popup-target="write-us">Оставить заявку</button>
           </div>
         </div>
       </section>
@@ -697,7 +697,7 @@
             </div>
           </div>
           <div class="testimonials__actions">
-            <button class="testimonials__btn btn btn_type-2 testimonials__actions-btn" type="button">Добавить отзыв</button>
+            <button class="testimonials__btn btn btn_type-2 testimonials__actions-btn" type="button" data-popup-target="add-testimonial">Добавить отзыв</button>
           </div>
         </div>
       </section>
@@ -779,6 +779,80 @@
       </div>
     </footer>
     <!--end footer-->
+    <div class="popup" data-popup-id="add-testimonial" tabindex="-1" role="dialog">
+      <div class="popup__container">
+        <div class="popup__close js-popup-close">
+          <svg class="icon icon-close ">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </div>
+        <section class="contact contact_popup">
+          <div class="section-title section-title_center section-title_white contact__title">
+            <svg class="icon icon-decor-triangle section-title__icon">
+              <use xlink:href="img/sprite.svg#icon-decor-triangle"></use>
+            </svg>
+            <span class="section-title__label">Добавить отзыв</span>
+            <h2 class="section-title__text">Заполните все поля и Ваш отзыв опубликуют после подтвержения администратора</h2>
+          </div>
+          <form class="contact__form form" action="#!" method="POST">
+            <div class="contact__form-row row">
+              <div class="contact__form-field form-field">
+                <input class="form-field__input" type="text" name="" placeholder="Имя" required="required" />
+              </div>
+              <div class="contact__form-field form-field">
+                <input class="form-field__input" type="text" name="" placeholder="Номер телефона..." required="required" />
+              </div>
+              <div class="contact__form-field form-field">
+                <input class="form-field__input" type="text" name="" placeholder="Email..." required="required" />
+              </div>
+            </div>
+            <textarea class="contact__form-textarea textarea" placeholder="Ваше сообщение..." required="required"></textarea>
+            <div class="contact__form-submit-wrap">
+              <label class="contact__form-submit-btn form-submit-btn btn btn_type-1">Отправить заявку
+                <input type="submit" />
+              </label>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+    <div class="popup" data-popup-id="write-us" tabindex="-1" role="dialog">
+      <div class="popup__container">
+        <div class="popup__close js-popup-close">
+          <svg class="icon icon-close ">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </div>
+        <section class="contact contact_popup">
+          <div class="section-title section-title_center section-title_white contact__title contact__title contact__title_sm">
+            <svg class="icon icon-decor-triangle section-title__icon">
+              <use xlink:href="img/sprite.svg#icon-decor-triangle"></use>
+            </svg>
+            <span class="section-title__label">Написать нам</span>
+            <h2 class="section-title__text">Есть вопросы? Пиши или заказывай решение SHL теста</h2>
+          </div>
+          <form class="contact__form form" action="#!" method="POST">
+            <div class="contact__form-row row">
+              <div class="contact__form-field form-field">
+                <input class="form-field__input" type="text" name="" placeholder="Имя" required="required" />
+              </div>
+              <div class="contact__form-field form-field">
+                <input class="form-field__input" type="text" name="" placeholder="Номер телефона..." required="required" />
+              </div>
+              <div class="contact__form-field form-field">
+                <input class="form-field__input" type="text" name="" placeholder="Email..." required="required" />
+              </div>
+            </div>
+            <textarea class="contact__form-textarea textarea" placeholder="Ваше сообщение..." required="required"></textarea>
+            <div class="contact__form-submit-wrap">
+              <label class="contact__form-submit-btn form-submit-btn btn btn_type-1">Отправить заявку
+                <input type="submit" />
+              </label>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
     <!--LOAD SCRIPTS-->
     <script src="js/app.js"></script>
   </body>

@@ -27,6 +27,10 @@ html(lang='ru')
       block footer
         include ../partials/_footer
 
+      block modals
+        +popup({ name: 'add-testimonial' })
+        +popup({ name: 'write-us' })
+
       //LOAD SCRIPTS
       block scripts
         script(src="js/app.js")

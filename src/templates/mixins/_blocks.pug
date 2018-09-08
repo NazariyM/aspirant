@@ -1,9 +1,9 @@
-mixin btn(type, text, classMod)
+mixin btn(type, text, classMod, popup)
 	case type
 		when 'a'
 			+e.A.btn.btn(class= classMod href='#!')= text
 		when 'b'
-			+e.BUTTON.btn.btn(class= classMod type='button')= text
+			+e.BUTTON.btn.btn(class= classMod type='button' data-popup-target= popup)= text
 
 mixin sectTitle(label, text, classMod, text2)
 	+b.section-title(class= classMod)
