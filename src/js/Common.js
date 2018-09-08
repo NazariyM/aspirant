@@ -25,7 +25,7 @@ export class Common {
   }
 
   addClassIE() {
-    if (detectIE) $body.addClass('is-ie');
+    if (detectIE()) $body.addClass('is-ie');
   }
 
   screenScroll() {
