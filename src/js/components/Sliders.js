@@ -40,7 +40,21 @@ class Sliders {
   initTestimonialsSld() {
     this.$testimonialsSld.slick($.extend({}, this.defaultOptions, {
       slidesToShow: 3,
-      infinite: false
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 1199,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 1023,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          } }]
     }));
   }
 }

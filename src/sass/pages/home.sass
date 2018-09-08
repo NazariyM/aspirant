@@ -2,9 +2,18 @@
 .screen
    position: relative
    display: flex
-   height: 100vh
+   height: 95vh
    padding-top: 140px
    color: #fff
+   +rmin(1921)
+      height: 100vh
+   +sm
+      height: 100vh
+   +xs
+      height: 100vh
+      padding-top: 130px
+   +mob-fix
+      height: 170vh
    &__decor
       top: 0
       left: 0
@@ -16,19 +25,32 @@
          filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2))
          object-fit: cover
          font-family: 'object-fit: cover;'
+         +xs
+            height: 120%
       &_2
          z-index: -2
+         +sm
+            top: 50%
+         +xs
+            top: 35%
+            height: 100%
    &__container
       display: flex
       flex-direction: column
       justify-content: center
-      height: 72%
+      height: 73.5%
+      +xs
+         height: 100%
    &__inner
       display: flex
       align-items: center
       justify-content: space-between
       max-width: 1006px
       padding-left: 25px
+      +sm
+         padding-left: 0
+      +xs
+         flex-direction: column
    &__decor-triangle
       position: absolute
       top: -60%
@@ -37,13 +59,27 @@
       width: 452px
       height: 434px
       fill: #7352c5
+      +sm
+         top: -50%
+         left: -15%
+         width: 412px
+         height: 374px
+      +xs
+         height: 260px
+         left: 50%
+         transform: translateX(-50%)
+         width: auto
    &__titles-wrap
       position: relative
       flex: 0 1 400px
       padding-right: 90px
-      font-size: 60px
       text-transform: uppercase
-      
+      +sm
+         flex: 0 1 370px
+      +xs
+         flex: 0 1 auto
+         margin-bottom: 30px
+         padding: 0 0 5px
       &::after
          position: absolute
          top: 58px
@@ -52,18 +88,50 @@
          height: 6px
          background-color: $color5
          content: ''
+         +sm
+            right: 20px
+         +xs
+            height: 3px
+            width: 108px
+            top: 100%
+            right: 12px
    &__title
       margin-bottom: 20px
       +f('gp700', 150, 150)
+      +sm
+         font-size: 120px
+         line-height: 120px
+      +xs
+         font-size: 80px
+         line-height: 60px
    &__sub-title
+      font-size: 60px
       text-align: right
       letter-spacing: 12px
+      +sm
+         font-size: 44px
+      +xs
+         font-size: 28px
    &__descr
-      flex: 0 1 545px
+      flex: 0 1 calc(100% - 400px)
+      padding-left: 35px
+      +md
+         padding-left: 23px
+         flex: 0 1 calc(100% - 370px)
+      +xs
+         flex: 0 1 auto
+         padding-left: 0
       &-text
          margin-bottom: 31px
          font-size: 26px
          line-height: 40px
+         +sm
+            font-size: 20px
+            line-height: 30px
+         +xs
+            margin-bottom: 20px
+            font-size: 15px
+            line-height: 22px
          &-mark
             +f('gp500')
             &_color-1
@@ -75,17 +143,26 @@
 
 // *** begin about *** //
 .about
-   margin: -120px 0 0
+   margin: -100px 0 0
    padding: 50px 0 15px
    background: no-repeat 38% 36%
    background-size: auto
+   +sm
+      margin: 0
    &__container
       display: flex
       align-items: center
       justify-content: space-between
+      +xs
+         flex-direction: column
    &__text
       flex: 0 1 percentage(680 / 1140)
       margin-top: -30px
+      +xs
+         flex: 0 1 auto
+         width: 100%
+         margin: 0 0 20px
+   
    &__title
       max-width: 600px
       margin-bottom: 45px
@@ -98,12 +175,17 @@
       margin-right: -25px
       +ratio(496, 545)
       +cover
+      +xs
+         width: 100%
+         margin-right: 0
 // end about //
 
 // *** begin services *** //
 .services
    position: relative
    padding: 23px 0 90px
+   +xs
+      padding: 23px 0 40px
    &__decor
       top: -26%
       left: -30px
@@ -115,6 +197,12 @@
    &__row
       position: relative
       margin: 0 -17px
+      +md
+         justify-content: center
+      +xs
+         flex-direction: column
+         align-items: center
+         margin: 0 -15px
    &__item
       $parent: &
       position: relative
@@ -124,6 +212,13 @@
       margin: 0 17px
       padding: 20px
       cursor: pointer
+      +md
+         flex: 0 1 calc(50% - 34px)
+      +xs
+         flex: 0 1 auto
+         width: calc(100% - 30px)
+         margin: 0 15px
+         padding: 15px
       &_full
          flex: 0 1 auto
          width: 100%
@@ -131,6 +226,8 @@
          max-width: none
          margin: 0!important
          cursor: default
+         +xs
+            height: auto
          &:hover
             transform: none
       &.slick-slide
@@ -146,23 +243,51 @@
          opacity: 0.1
          pointer-events: none
          content: ''
+      &:nth-child(1) ~ &
+         +xs
+            margin-top: 30px
+      &:nth-child(2) ~ &
+         +md
+            margin-top: 34px
       &:nth-child(3) ~ &
          margin-top: 34px
       &-col
          flex: 0 0 220px
          text-align: center
+         +md
+            flex: 0 1 160px
+         +xs
+            flex: 0 1 auto
+            width: 100%
+            margin: 0 0 20px
       &-info
          flex: 0 1 calc(100% - 220px)
          padding-left: 35px
+         +md
+            flex: 0 1 calc(100% - 160px)
+         +xs
+            flex: 0 1 auto
+            width: 100%
+            padding-left: 0
+            
          &-text
             height: 300px
             font-size: 18px
             line-height: 28px
+            +md
+               font-size: 16px
+               line-height: 26px
             p
                &:not(:last-child)
                   margin-bottom: 18px
+                  +md
+                     margin-bottom: 12px
             &-inner
                padding: 15px 25px 0 0
+               +md
+                  padding: 15px 0 0
+               +xs
+                  padding: 0
          .mCSB_scrollTools
             right: -7px
       &-corner
@@ -179,6 +304,9 @@
             left: 20px
             border-left-width: 1px
             border-top-width: 1px
+            +xs
+               top: 15px
+               left: 15px
             #{$parent}:hover &
                top: 0
                left: 0
@@ -187,6 +315,9 @@
             right: 20px
             border-bottom-width: 1px
             border-right-width: 1px
+            +xs
+               bottom: 15px
+               right: 15px
             #{$parent}:hover &
                bottom: 0
                right: 0
@@ -195,9 +326,15 @@
          align-items: center
          height: 100%
          padding: 15px
+         +xs
+            padding: 10px
+            justify-content: center
          #{$parent}_full &
             padding: 0 0 15px 15px
             align-items: flex-start
+            +xs
+               flex-direction: column
+               padding: 5px
       &-icon
          z-index: 2
          &-wrap
@@ -205,6 +342,8 @@
             flex: 0 0 112px
             height: 80px
             +flexCenter
+            +xs
+               transform: scale(.7)
             &::after, &::before
                position: absolute
                z-index: 1
@@ -226,14 +365,24 @@
       &-text
          padding-left: 20px
          margin-top: 5px
+         +xs
+            padding-left: 5px
+            flex: 1 1 150px
          #{$parent}_full &
             padding-left: 0
          &_has-list
             padding-left: 10px
+            +xs
+               padding-left: 5px
+               flex-shrink: 0
+               flex-grow: 1
       &-title
          margin-bottom: 10px
          +f('gp700', 22)
          color: $color4
+         +xs
+            font-size: 18px
+            line-height: 20px
          #{$parent}-text_has-list &
             padding-left: 10px
          #{$parent}_full &
@@ -247,13 +396,21 @@
             color: $color2
       &-list
          font-size: 14px
-         li
+         +xs
+            font-size: 13px
       &-actions
          margin-top: 20px
+         +xs
+            display: flex
+            flex-direction: column
+            align-items: center
          &-btn
             margin-right: 56px
             padding: 14px 40px 13px
-            
+            +xs
+               margin: 0 0 40px
+               padding: 14px 15px 13px
+   
    &__content
       position: absolute
       top: -10px
@@ -268,19 +425,25 @@
       box-shadow: 0 15px 40px rgba(18, 3, 58, 0.15)
       border-radius: 4px
       pointer-events: none
+      +md
+         left: 6%
+         right: 6%
+         top: 50%
+         margin-top: -222px
+         bottom: auto
+      +xs
+         height: auto
+         margin-top: 0
+         top: 0
+         left: 15px
+         right: 15px
+   
       &.is-active
          pointer-events: auto
          transform: scale(1)
          opacity: 1
          .services__item-inner
             pointer-events: auto
-      .slider-btn
-         margin-top: -23px
-         &_prev
-            left: -65px
-         &_next
-            right: -65px
-            
       &-close
          +f('gp400')
          font-size: 16px
@@ -289,26 +452,55 @@
          transition: .3s ease-in-out
          &:hover
             color: $color6
+   &__slider
+      .slider-btn
+         margin-top: -23px
+         +xs
+            margin-top: 0
+            top: calc(100% - 70px)
+            z-index: 10
+         &_prev
+            left: -65px
+            +md
+               left: -40px
+            +xs
+               left: 12%
+         &_next
+            right: -65px
+            +md
+               right: -40px
+            +xs
+               right: 12%
+            
 // end services //
 
 // *** begin how-to *** //
 .how-to
    padding: 70px 0
+   +md
+      padding: 70px 0 36px
+   +xs
+      padding: 30px 0 36px
    &__title
       max-width: 500px
       margin: 0 auto 47px
    &__row
       margin: 0 -17px
+      justify-content: center
       counter-reset: howToItem
    &__item
       position: relative
       flex: 0 1 calc(25% - 34px)
       height: 214px
+      max-width: 259.5px
+      min-width: 259.5px
       margin: 0 17px
       padding: 35px 25px 25px
       text-align: center
       counter-increment: howToItem
       overflow: hidden
+      +md
+         margin: 0 17px 34px
       &::before
          position: absolute
          left: -12px
@@ -357,24 +549,31 @@
 .train
    position: relative
    padding: 88px 0
+   +xs
+      padding: 30px 0
    &__decor
       right: 0
-      //top: -33%
       top: 2%
-      //width: 490px
-      //height: 1193px
       height: 123%
    &__container
       display: flex
       align-items: flex-start
       justify-content: space-between
+      +xs
+         flex-direction: column
    &__img
       flex: 0 1 percentage(434 / 1140)
       margin: 10px 0 0 -25px
       +ratio(434, 433)
       +cover
+      +xs
+         flex: 0 1 auto
+         width: 100%
+         margin: 0
    &__text
       flex: 0 1 percentage(672 / 1140)
+      +xs
+         flex: 0 1 auto
       p
          font-size: 18px
          line-height: 28px
@@ -405,6 +604,8 @@
 // *** begin pass *** //
 .pass
    padding: 44px 0 70px
+   +xs
+      padding: 40px 0
    &__title
       margin-bottom: 44px
    &__text
@@ -418,12 +619,26 @@
    &__videos
       max-width: 1000px
       margin: 45px auto
+      +xs
+         margin: 15px auto
       &-row
          margin: 0 -20px
+         +sm
+            flex-direction: column
+         +xs
+            margin: 0
       &-col
          position: relative
          flex: 0 1 50%
          padding: 0 40px
+         max-width: 520px
+         width: 100%
+         +md
+            margin: 0 auto
+         +xs
+            flex: 0 1 auto
+            width: 100%
+            padding: 30px 0 0
          &::after, &::before
             position: absolute
             top: 50%
@@ -433,8 +648,15 @@
             background-color: $color5
             opacity: 0.2
             content: ''
+         &:nth-child(1) ~ &
+            +md
+               padding: 40px 40px 0
+            +xs
+               padding: 30px 0 0
          &:nth-child(2) ~ &
             padding: 40px 40px 0
+            +xs
+               padding: 30px 0 0
          &:nth-child(1n)
             &::before
                left: 0
@@ -460,11 +682,18 @@
    padding: 93px 0 80px
    background: no-repeat 56% 99%
    background-size: auto
+   +xs
+      padding: 30px 0 0
    &__decor
       left: 0
       top: -53%
       width: 536px
       height: 1173px
+      +xs
+         left: 0
+         top: 50%
+         width: 218px
+         height: 683px
    &__container
       max-width: 1190px
    &__title
@@ -472,26 +701,49 @@
       margin: 0 auto 5px
    &__slider
       margin-bottom: 10px
+      +md
+         max-width: 745px
+         margin: 0 auto 10px
+      +sm
+         max-width: 380px
+         padding-bottom: 50px
       .slick-list
          padding: 55px 20px 40px
          margin: 0 -25px
+         height: auto !important
+         +md
+            margin: 0 -15px
+         +xs
+            padding: 55px 0 40px
       .slider-btn
+         +xs
+            top: calc(100% - 40px)
          &_prev
             left: -48px
+            +xs
+               left: calc(50% - 50px)
          &_next
             right: -48px
+            +xs
+               right: calc(50% - 50px)
    &__item
       position: relative
       margin: 0 25px
       height: 350px
       opacity: 0
       +gpu
+      +md
+         margin: 0 15px
+      +xs
+         height: 300px
       &.slick-active
          opacity: 1
       &-inner
          padding: 40px 11px 0 36px
          border-radius: 4px
          background: #fff
+         +xs
+            padding: 30px 10px 20px 20px
       &-date
          position: absolute
          top: -45px
@@ -505,6 +757,8 @@
          color: #fff
          text-align: center
          +f('gp500', 14, 14)
+         +xs
+            right: 15px
          &_color-1
             background-color: $color5
          &_color-2
@@ -526,6 +780,8 @@
       &-text
          position: relative
          height: 260px
+         +xs
+            height: 210px
          &::after
             transition: .15s ease-in-out
          &.is-scrolled::after
@@ -543,6 +799,8 @@
             padding-right: 25px
             font-size: 16px
             line-height: 26px
+            +xs
+               padding-right: 0
    &__actions
       text-align: center
       &-btn
@@ -555,18 +813,23 @@
    padding: 277px 0 77px
    +rmin(1921)
       padding: 350px 0 77px
+   +xs
+      margin: -140px 0 0
+      padding: 277px 0 50px
    &__decor
       top: 0
       left: 0
       width: 100%
       object-fit: cover
       font-family: 'object-fit: cover;'
-      +r(1919)
+      pointer-events: none
+      +lg
          height: 100%
       &_1
          top: 1px
          z-index: -1
          filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2))
+         
       &_2
          top: 24%
          z-index: -2
@@ -574,6 +837,7 @@
          position: absolute
          z-index: 1
          fill: rgba($white, .15)
+         pointer-events: none
          &_1
             left: 7.8%
             bottom: 6.3%
@@ -593,9 +857,18 @@
    &__form
       &-row
          margin: 0 -15px 30px
+         +xs
+            flex-direction: column
       &-field
          flex: 0 1 33.33333%
          padding: 0 15px
+         +xs
+            flex: 0 1 auto
+            width: 100%
+         &:not(:last-child)
+            +xs
+               margin-bottom: 15px
+         
       &-textarea
          margin-bottom: 40px
       &-submit-wrap

@@ -7,16 +7,24 @@
    &_header
       padding: 0 10px 0 20px
       justify-content: space-between
+      +sm
+         padding: 0
    &__link
       display: flex
       align-items: inherit
       font-size: 14px
       color: $color3
       transition: .3s ease-in-out
+      +sm
+         font-size: 12px
       &:hover
          color: $color5
          svg
             fill: $color5
+      #{$parent}_header &
+         &:nth-child(4)
+            +xs
+               display: none
       #{$parent}_footer &
          color: $white
          &:hover
@@ -33,11 +41,15 @@
          +f('gp500')
          #{$parent}_header &
             font-size: 12px
+            +xs
+               display: none
          #{$parent}_footer &
             margin-right: 44px
             font-size: 14px
       &-icons
          #{$parent}_header &
+            +xs
+               display: none
          #{$parent}_footer &
             margin-left: 48px
       
@@ -50,6 +62,8 @@
          transition: .3s ease-in-out
          &:not(:last-child)
             margin-right: 46px
+            +sm
+               margin-right: 6px
          &:hover
             transform: translateY(-5px)
       &-icon
@@ -60,6 +74,8 @@
          #{$parent}_header &
             &:not(:last-child)
                margin-right: 46px
+               +sm
+                  margin-right: 6px
          #{$parent}_footer &
             &:not(:last-child)
                margin-right: 25px
@@ -71,6 +87,9 @@
       flex: 0 1 210px
       color: #fff
       font-size: 14px
+      +xs
+         flex: 0 1 140px
+         padding: 12px 15px 10px
 // end contact-block //
 
 // *** begin video-block *** //

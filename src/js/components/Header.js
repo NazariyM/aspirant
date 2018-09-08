@@ -10,24 +10,33 @@ class Header {
 	constructor() {
 		this.body = document.querySelector('body');
 		this.header = document.querySelector('.header');
-		// this.menuBtn = this.header.querySelector('.header__menu-btn');
+		this.nav = this.header.querySelector('.header__nav');
+		this.navBtn = this.header.querySelector('.header__nav-btn');
 		this.scrollTop = 0;
 
 		this.init();
 	}
 
-	async init() {
+	init() {
 		this.initFix();
 		this.initScroll();
 		this.bindEvents();
 	}
 
 	bindEvents() {
-		// this.menuBtn.addEventListener('click', () => {
-    //   if (Resp.isMobile) this.beforeOpen();
-		// 	this.toggleMenu();
-		// });
+		this.navBtn.addEventListener('click', () => {
+      this.beforeOpen();
+			this.toggleMenu();
+    });
+		 this.onResize();
 	}
+
+	onResize() {
+    window.onresize = () => {
+      this.navBtn.classList.remove(css.active);
+      this.nav.classList.remove(css.active);
+    };
+  }
 
   beforeOpen() {
     this.scrollTop = $window.scrollTop();
@@ -40,30 +49,9 @@ class Header {
     this.header.classList.remove(css.menuActive);
   }
 
-	toggleMenu(state = false) {
-		switch (state) {
-		case 'open':
-			this.menuBtn.classList.add(css.active);
-		break;
-		case 'close':
-			this.menuBtn.classList.remove(css.active);
-		break;
-		default:
-			this.burgerActiveState = css.active;
-	}
-		return HeaderAPI;
-	}
-
-	lockBody() {
-		Resp.isMobile ? this.body.classList.toggle(css.locked) : false;
-	}
-
-	set burgerActiveState(className) {
-		this.menuBtn.classList.toggle(className);
-	}
-
-	get burgerActiveState() {
-		return this.menuBtn.classList.contains(css.active);
+	toggleMenu() {
+			this.navBtn.classList.toggle(css.active);
+			this.nav.classList.toggle(css.active);
 	}
 
 	initFix() {
@@ -85,6 +73,7 @@ class Header {
 	}
 
   initScroll() {
+		const _this = this;
     const offsetTop = Resp.isDesk ? 70 : 60;
     const $link = $header.find('.header__nav-list').find('a');
 
@@ -92,6 +81,8 @@ class Header {
       e.preventDefault();
       const el = $(this).attr('href');
       $scrolledElements.animate({scrollTop: $(el).offset().top - offsetTop}, 1500);
+      _this.nav.classList.remove(css.active);
+      _this.navBtn.classList.remove(css.active);
       return false;
     });
   }
