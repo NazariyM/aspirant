@@ -1,5 +1,7 @@
 import objectFitImages from 'object-fit-images';
 import objectFitVideos from 'object-fit-videos';
+import { $scrolledElements, $body, Resp, detectIE } from './_helpers';
+
 // import '@fancyapps/fancybox';
 
 import './components/Header';
@@ -8,7 +10,6 @@ import './components/Sliders';
 import './components/CustomScroll';
 import './components/VideoBlock';
 import './sections/Services';
-import { $scrolledElements, Resp } from './_helpers';
 
 export class Common {
   constructor() {
@@ -20,6 +21,11 @@ export class Common {
     objectFitVideos();
     this.screenScroll();
     this.expandText();
+    this.addClassIE();
+  }
+
+  addClassIE() {
+    if (detectIE) $body.addClass('is-ie');
   }
 
   screenScroll() {

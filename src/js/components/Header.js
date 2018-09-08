@@ -75,7 +75,13 @@ class Header {
   initScroll() {
 		const _this = this;
     const offsetTop = Resp.isDesk ? 70 : 60;
+    const $logo = $('.header__logo');
     const $link = $header.find('.header__nav-list').find('a');
+
+    $logo.on('click', function (e) {
+    	e.preventDefault();
+      $scrolledElements.animate({scrollTop: $body.offset().top }, 1500);
+    });
 
     $link.on('click', function (e) {
       e.preventDefault();

@@ -71,6 +71,9 @@ function createConfig(env) {
           exclude: [
             path.resolve(__dirname, 'node_modules'),
           ],
+          options: {
+            presets: ['es2015'],
+          },
         },
         {
             test: /\.glsl$/,
