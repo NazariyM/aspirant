@@ -9,6 +9,13 @@
       justify-content: space-between
       +sm
          padding: 0
+   &_footer
+      flex: 0 1 766px
+      justify-content: space-between
+      +xs
+         flex-direction: column
+         flex: 0 1 auto
+         width: 100%
    &__link
       display: flex
       align-items: inherit
@@ -29,8 +36,9 @@
          color: $white
          &:hover
             color: $color5
-         &:not(:last-of-type)
-            margin-right: 50px
+         &:not(:last-child)
+            +xs
+               margin-bottom: 15px
       svg
          margin-right: 9px
          fill: currentColor
@@ -44,15 +52,18 @@
             +xs
                display: none
          #{$parent}_footer &
-            margin-right: 44px
             font-size: 14px
+            +sm
+               display: none
+            +xs
+               display: block
+               margin-bottom: 15px
       &-icons
          #{$parent}_header &
             +xs
                display: none
          #{$parent}_footer &
-            margin-left: 48px
-      
+         
       &-link
          display: inline-block
          vertical-align: middle
@@ -64,6 +75,8 @@
             margin-right: 46px
             +sm
                margin-right: 6px
+            +xs
+               margin-right: 15px
          &:hover
             transform: translateY(-5px)
       &-icon
